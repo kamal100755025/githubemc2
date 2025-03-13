@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>testing purpose</title>
+      <style>
+        *{margin:0px;padding:0px;}
+        body{margin-top: 120px;}
+        header{background-color: rgb(0, 30, 255); width:100%;height:110px;display:block;overflow:hidden;position: fixed; top: 0; left: 0; z-index: 1000;}
+        .t1{width:100%;height:40px;background-color: aquamarine;gap:10px;display:block;}
+        .logo{padding:0;float:left;width:50px;}
+        .title{float:right;}
+        .t2{width:100%;height:40px;align-items: center;text-align: center;}
+        .t3{width:100%;height:30px;font-size:20px;display: flex;justify-content: flex-end;Padding:2px;background-color: aqua;}
+        ul{display:flex;justify-content:center;list-style-type: none;text-align: center;gap:10px;}
+        ul a{text-decoration: none;}
+        ul li {padding:2px;}
+        .t4{background-color: bisque;width:100%;height:40px;display:flex;justify-content: flex-start;font-size: 20px;}
+        .t4 nav{width:100%;}
+        .t4 ul{display: flex;justify-content:left;list-style-type: none;text-align: center;gap:20px;height:30px;padding:2px;}
+        .search-bar{width:150%;justify-content: center;display:flex; padding:2px;height:30px;gap:20px;}
+        .search-bar input{width:50%;border-radius: 20px;}
+        .search-bar button{width:10%;border-radius:10px; background-color: aquamarine;}
+        .About{width:100%; height:500px;margin:10px;padding:10px;background-image:url(aboutuspic.jpg);}
+        .about-us{width:35%; height:460px;background-color:rgb(0, 0, 0, 0.7);color:aliceblue;padding:20px;display:block;align-content:flex-start;justify-content: flex-end;float: right; gap:3px; }
+        .fishproducts{width:100%;height:400px;display:block;overflow-x: scroll; background-image:url(fishproductwallpaper.jpg);margin:10px;padding:10px;}
+        .fishes{width:60%; height:360px; padding:10px;background-color:rgba(0,0,0,0.2);float:right;}
+        .price::before {content: "\20B9"; text-align:left;font-weight: bolder;}
+        .price{width:100%;height:20px;font-weight:bold; color:aliceblue;}
+        .add{background-color:rgb(43, 43, 170);width:70px;height:25px;border-radius:10px;color:black;}
+        .buy{background-color:rgb(67, 181, 67);width:70px;height:25px;border-radius:10px;color:black;}
+        .carousel{display:flex;overflow-x: auto;gap:10px;background-color:rgb(0, 0, 0, 0.7);height:360px; text-align: center;}
+        .carousel::-webkit-scrollbar{display:none;}
+        .item{min-width:300px;border:2px solid green;border-radius:10px;overflow:hidden;box-sizing:border-box;background-color:rgb(0, 0, 0, 0.2);}
+        .plantproducts{width:100%;height:400px;display:block;overflow-x: scroll; background-image:url(plantproductswallpaper.jpg);margin:10px;padding:10px;}
+        .plants{width:45%; height:360px; padding:10px;background-color:rgba(0,0,0,0.55);float:right;}
+        .carousel2{display:flex;overflow-x: auto;gap:10px;background-color: black;height:360px;text-align: center;}
+        .carousel2::-webkit-scrollbar{display:none;}
+        .liveplants{min-width:300px;border:2px solid green;border-radius:10px;overflow:hidden;box-sizing:border-box;background-color:rgb(0, 0, 0, 0.2);}
+        .sproducts{width:100%;height:400px;display:block;overflow-x: scroll; background-image:url(soilwallpaper.jpg);margin:10px;padding:10px;}
+        .soils{width:70%; height:360px; padding:10px;background-color:rgba(0,0,0,0.55);float:right;}
+        .carousel3{display:flex;overflow-x: auto;gap:10px;background-color: black;height:360px;text-align: center;}
+        .carousel3::-webkit-scrollbar{display:none;}
+        .soilsproducts{min-width:300px;border:2px solid green;border-radius:10px;overflow:hidden;box-sizing:border-box;background-color:rgb(0, 0, 0, 0.2);}
+        .aproducts{width:100%;height:400px;display:block;overflow-x: scroll; background-image:url(acwallpaper.jpg);margin:10px;padding:10px;}
+        .accessories{width:60%; height:360px; padding:10px;background-color:rgba(0,0,0,0.55);float:right;text-align: center;}
+        .carousel4{display:flex;overflow-x: auto;gap:10px;background-color: black;height:360px;}
+        .carousel4::-webkit-scrollbar{display:none;}
+        .accessoriesproducts{min-width:300px;border:2px solid green;border-radius:10px;overflow:hidden;box-sizing:border-box;background-color:rgb(0, 0, 0, 0.2);}
+        .lproducts{width:100%;height:400px;display:block;overflow-x: scroll; background-image:url(fwallpaper.jpeg);margin:10px;padding:10px;}
+        .livefoods{width:60%; height:360px; padding:10px;background-color:rgba(0,0,0,0.55);float:right;}
+         .carousel5{display:flex;overflow-x: auto;gap:10px;background-color: black;height:360px;text-align: center;}
+        .carousel5::-webkit-scrollbar{display:none;}
+        .livefoodproducts{min-width:300px;border:2px solid green;border-radius:10px;overflow:hidden;box-sizing:border-box;background-color:rgb(0, 0, 0, 0.2);}
+        .oproducts{width:100%;height:400px;display:block;overflow-x: scroll; background-image:url(pebbles2.jpg);margin:10px;padding:10px;}
+        .offers{width:60%; height:360px; padding:10px;background-color:rgba(0,0,0,0.55);float:right;
+        .carousel6{display:flex;overflow-x: auto;gap:10px;background-color: black;height:360px;text-align: center;}}
+        .carousel6::-webkit-scrollbar{display:none;}
+        .offersproducts{min-width:300px;border:2px solid green;border-radius:10px;overflow:hidden;box-sizing:border-box;background-color:rgb(0, 0, 0, 0.2);}
+        footer{width:100%;height:400px;background-color:rgba(0,0,0,0.8);}
+        .f1,.f2{display:flex;height:100%;flex:1;}
+        .f1{width:100%;height:100px;display:flex; margin-top:10px; }
+        .box1{width:60%;text-align:center;padding:2px;color:aliceblue;}
+        .box2{width:40%;text-align:center;padding:2px;justify-content: center;padding-top:15px;}
+        .box2 input{width:70%;height:50px;border-radius:5px;margin-top:10px;}
+        .box2 button{width:20%;height:50px;border-radius:10px;background-color:crimson;font-size:28px;margin-top:10px;}
+        .footerbottom { display: flex; width: 100%; height: 200px;} /* Adjust height as needed */
+        .f2{width:60%;height:200px;display:flex;overflow:hidden;padding:20px;color:aliceblue;}
+        .bx1,.bx2,.bx3{flex:1;height:100;text-align:left;padding:10px;}
+        .bx1{width:10%;border:2px solid red;}
+        .bx2{width:25%;border:2px solid blue;}
+        .bx3{width:20%;border:2px solid green;}
+        .f3{width:40%;height:200px;display:flex;overflow:hidden;padding:10px;}
+        .cr{padding:20px;color:azure;}
+        
+      </style>
+      </head>
+      <body>
+        <header>
+          <div class="t1"> 
+            <div class="logo">
+                <img src="fishlogo1.png" alt=""  style="width:40px;height:35px">
+            </div>
+            <div class="t2">
+                <h1 style="text-align: center;">Welcome to the Pisces World!</h1>
+            </div>
+          </div>
+            <div class="t3">
+              <nav>
+                <ul>
+                    <li><a href="newcheck.html">Home</a></li>
+                    <li><a href="signin.html">Signin</a></li>
+                    <li><a href="loginform.html">Login</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">contact</a></li>
+                  </ul>
+                </nav> 
+              </div>
+            <div class="t4">
+              <nav>
+                <ul>
+                  <li><a href="#">Fish</a></li>
+                  <li><a href="#">Plants</a></li>
+                  <li><a href="#">Soil</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Live Food</a></li>
+              </ul>
+              </nav>
+              <div class="search-bar">
+                <input type="text" placeholder="          Search..." id="searchInput">
+                <button onclick="search()">Search</button>
+            </div>
+            </div>
+              </header>
+                <section class="About">
+    <div class="about-us">
+        <h2 style="color:aquamarine;">About Us</h2><br>
+<p>Welcome to <b>Pisces World</b>, where we make fishkeeping a unique and stress-free hobby! Our mission is to nurture your passion for aquariums by offering healthy, vibrant fish raised on natural, nutrient-rich diets like daphnia, moina, and brine shrimp. For optimal health, we supplement their diet with high-quality nutritional food, ensuring every fish you purchase thrives.</p><br>
+<p>We take pride in crafting an engaging experience for hobbyists by introducing cutting-edge features. From <b>customized aquarium toys created with advanced 3D printing technology</b> to unique accessories tailored to your tank’s needs, we aim to redefine fishkeeping.</p><br>
+<p>Our <b>specialized plants</b> are perfect for low-CO2, low-light environments, making them ideal for beginners and experienced enthusiasts alike. Along with live food to keep your fish active and happy, we provide expert advice to enhance your aquascaping journey.</p><br>
+<p>At Pisces World, we’re more than just a store. We’re a partner in creating serene, beautiful habitats. Let’s keep fishkeeping simple, stress-free, and exciting – all in a uniquely tailored way.</p><br>
+<p><mark><b>Our Motto:</b></mark> <i>Healthy fish, happy tanks, and unique experiences.</i></p>
+    </div>
+</section>
+<section class="fishproducts">
+  <div class="fishes">
+    <div class="carousel"><div class="item">
+      <img src="fishes/fish/p1.jpg" alt="yellowcrowntail"><div class="price"><del>500</del><ins></ins>₹250</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p2.jpg" alt="orangecrowntail"><div class="price">300 </div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p3.jpg" alt="blackcrowntail"><div class="price">500</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p4.jpg" alt="reddevilcrowntail"><div class="price">450</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p5.jpg" alt="redcrowntail"><div class="price">400</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p6.jpg" alt="marblered"><div class="price">300</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p7.jpg" alt="yellowplakard"><div class="price">500</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p8.jpg" alt="bluerim"><div class="price">600</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p9.jpg" alt="redrim"><div class="price">600</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p10.jpg" alt="orangelays"><div class="price">200</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p11.jpg" alt="leopard"><div class="price">300</div><button class="add">Add</button><button class="buy">buy</button></div>
+    <div class="item"><img src="fishes/fish/p12.jpg" alt="yellowleopard"><div class="price">500</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p13.jpg" alt="orangeguppy"><div class="price">400</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p14.jpg" alt="yellowfemaleguppy"><div class="price">150</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p15.jpg" alt="endlerguppy"><div class="price">250</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p16.jpg" alt="swordtail"><div class="price">150</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p17.jpg" alt="pandaorangegoldfish"><div class="price">800</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p18.jpg" alt="ranchugoldfish"><div class="price">400</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p19.jpg" alt="pandawhite"><div class="price">800</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p20.jpg" alt="blackpandagoldfish"><div class="price">1600</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p21.jpg" alt="stringray"><div class="price">4500</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p22.jpg" alt="tigerwolf"><div class="price">800</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p23.jpg" alt="whiteswordtail"><div class="price">80</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p24.jpg" alt="whitegaintgourami"><div class="price">350</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p25.jpg" alt="asianarowana"><div class="price">7000</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p26.jpg" alt="arapiama"><div class="price">1500</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p27.jpg" alt="alligatorgar"><div class="price">800</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p30.jpg" alt="knifefish"><div class="price">450</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p31.jpg" alt="oscarfish"><div class="price">400</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p32.jpg" alt="abaabafish"><div class="price">2800</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p33.jpg" alt="bluebettafish"><div class="price">80</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p34.jpg" alt="cichilds"><div class="price">160</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p35.jpg" alt="snakeheadfish"><div class="price">2000</div><button class=""></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p36.jpg" alt="ghostfish"><div class="price">250</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p37.jpg" alt="koiswordtail"><div class="price">150</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p38.jpg" alt="oearlgourami"><div class="price">160</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p39.jpg" alt="tigerbarb"><div class="price">50</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p40.jpg" alt="silverarowanaRGT"><div class="price">3200</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p41.jpg" alt="wildbettafish"><div class="price">1500</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p42.jpg" alt="wildbluebettafish"><div class="price">1800</div><button class="add"></button><button class="buy"></button></div>
+    <div class="item"><img src="fishes/fish/p43.jpg" alt="greenwildbettafish"><div class="price">1800</div><button class="add"></button><button class="buy"></button></div>  
+  </div>
+  </div>
+  
+  </div>
+</section>
+<section class="plantproducts">
+  <div class="plants">
+    <div class="carousel2">
+      <div class="liveplants"><img src="fishes/fish/pl1.jpg" alt="plant1"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl2.jpg" alt="plant2"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl3.jpg" alt="plant3"><div class="price">240</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl4.jpg" alt="plant4"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl5.jpg" alt="plant5"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl6.jpg" alt="plant6"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl7.jpg" alt="plant7"><div class="price">160</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl8.jpg" alt="plant8"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl9.jpg" alt="plant9"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl10.jpg" alt="plant10"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl11.jpg" alt="plant11"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl12.jpg" alt="plant12"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl13.jpg" alt="plant13"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl14.jpg" alt="plant14"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl15.jpg" alt="plant15"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl16.jpg" alt="plant16"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl17.jpg" alt="plant17"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl18.jpg" alt="plant18"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl19.jpg" alt="plant19"><div class="price">160</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl20.jpg" alt="plant20"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl21.jpg" alt="plant21"><div class="price">130</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl22.jpg" alt="plant22"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl23.jpg" alt="plant22"><div class="price">120</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="liveplants"><img src="fishes/fish/pl24.jpg" alt="plant"><div class="price">140</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    </div>
+  </div>
+  </div>
+
+</section>
+<section class="sproducts">
+  <div class="soils">
+  <div class="carousel3">
+    <div class="soilsproducts"><img src="fishes/fish/s1.jpg" alt="bonuses"><div class="price">450</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s2.jpg" alt="Natureaquasoil"><div class="price">800</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s3.jpg" alt="bonuses2"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s4.jpg" alt="amazon"><div class="price">450</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s5.jpg" alt="thriva"><div class="price">700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s6.jpg" alt="abusea"><div class="price">600</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s7.jpg" alt="aquariumsoil"><div class="price">800</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s8.jpg" alt="aquasoil2"><div class="price">450</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s9.jpg" alt="landen"><div class="price">350</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s10.jpg" alt="substrate"><div class="price">700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s11.jpg" alt="marina"><div class="price">600</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s12.jpg" alt="sphagunam"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s13.jpg" alt="neempeat"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s14.jpg" alt="blackpeat"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s15.jpg" alt="cowdung"><div class="price">900</div><button class="add">Add</button><button class="buy">Buy</button></div>
+      <div class="soilsproducts"><img src="fishes/fish/s16.jpg" alt="aquariumsoil2"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+  </div></div>
+</section>
+<section class="aproducts">
+  <div class="accessories">
+  <div class="carousel4">
+    <div class="accessoriesproducts"><img src="fishes/fish/a1.jpg" alt="volcano"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a2.jpg" alt="buddha"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a3.jpg" alt="childbuddha"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a4.jpg" alt="groot"><div class="price">600</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a5.jpg" alt="submarine"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a6.jpg" alt="warrior1"><div class="price">800</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a8.jpg" alt="warrior2"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a9.jpg" alt="warrior3"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a10.jpg" alt="rainyboy"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a11.jpg" alt="pirate"><div class="price">1000</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a12.jpg" alt="caption"><div class="price">800<button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a13.jpg" alt="sailor"><div class="price">800</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a14.jpg" alt="fishcatcher"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a15.jpg" alt="filtersponge1"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a16.jpg" alt="filtersponge2"><div class="price">600</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a17.jpg" alt="filtersponge3"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a18.jpg" alt="submergiblemotor"><div class="price">700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a19.jpg" alt="submergiblemotor2"><div class="price">700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a20.jpg" alt="internalfilter1"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="accessoriesproducts"><img src="fishes/fish/a21.jpg" alt="internalfilter2"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+</div>
+</div>
+</section>
+<section class="lproducts"><div class="livefoods">
+  <div class="carousel5">
+    <div class="livefoodproducts"><img src="fishes/fish/lf1.jpg" alt="daphnia"><div class="price">450</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf2.jpg" alt="bloddworms"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf3.jpg" alt="mealworms"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf4.jpg" alt="supermealworms"><div class="price">600</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf5.jpg" alt="grindalworms"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf6.jpg" alt="vineagareel"><div class="price">450</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf7.jpg" alt="monia"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf8.jpg" alt="cockroach"><div class="price">500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="livefoodproducts"><img src="fishes/fish/lf9.jpg" alt="bananaculture"><div class="price">300</div><button class="add">Add</button><button class="buy">Buy</button></div>
+  </div></div></section>
+<section class="oproducts"><div class="offers">
+  <div class="carousel6">
+    <div class="offersproducts"><img src="fishes/fish/na1.jpg" alt="redcrayfish"><div class="price">700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="offersproducts"><img src="fishes/fish/na2.jpg" alt="whitecrayfish"><div class="price">700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="offersproducts"><img src="fishes/fish/na3.jpg" alt="orangecrayfish"><div class="price">700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="offersproducts"><img src="fishes/fish/na5.jpg" alt="assassinationsnail"><div class="price">150</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="offersproducts"><img src="fishes/fish/na6.jpg" alt="goldenbeeshrimp"><div class="price">250</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="offersproducts"><img src="fishes/fish/na7.jpg" alt="blackshrimp"><div class="price">400</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="offersproducts"><img src="fishes/fish/na8.jpg" alt="cherrypinksoccershrimp"><div class="price">1700</div><button class="add">Add</button><button class="buy">Buy</button></div>
+    <div class="offersproducts"><img src="fishes/fish/na9.jpg" alt="vampirecrab"><div class="price">2500</div><button class="add">Add</button><button class="buy">Buy</button></div>
+  </div></div></section>
+  <footer>
+    <div class="f1">
+    <div class="box1">
+      <h1>BE THE FIRST TO KNOW</h1>
+      <p>Get all the latest information on Events, Sales and Offers.</p>
+      <p>Sign up for newsletter today.</p></div>
+    <div class="box2">
+    <label for="Email" id=""></label>
+    <input type="email" name="Email" id="Email">
+    <button type="submit">Subscribe</button>
+  </div>
+</div><hr>
+<div class="footerbottom">
+<div class="f2">
+  <div class="bx1">
+    <pre>
+      My Account
+      My order
+      Order History
+      Wishlist
+    </pre>
+
+</div>
+<div class="bx2">
+  <pre>
+About us
+Contact us
+Customer Reviews
+Bunnycart: In the News
+Earn with affiliate program
+Wholesale prices for Aquarium shops / Resel
+  </pre>
+
+</div>
+<div class="bx3">
+  <pre>
+Important Policies
+FAQ
+Shipping Policy
+Live Arrival Guarantee
+Refund & Cancellation Policy
+  </pre>
+
+</div>
+<div class="f3" style="width:100%;height:160px;padding:20px;align-items: center; gap:2px;">
+  <p style="border:2px solid yellow;font-size:60px;color:aliceblue; align-items: first baseline;" ><b>follow us on!</b></p>
+  <img src="in.png" alt="insta" width="100px"height="100px">
+<img src="wa.png" alt="linkedin" width="100px" height="100px">
+<img src="li.png" alt="whatsapp" widht="100px" height="100px">
+<img src="fb.png" alt="facebook" width="100px" height="100px">
+<img src="yt.png" alt="youtube" widht="100px" height="100px"></div>
+</div></div>
+<br>
+<br>
+<hr>
+<div class="cr"><p><b>Copyright 2024 © Pisces world. All Rights Reserved. Pisces Trade Mark is registered.
+</b>
+</p></div>
+
+</footer>
+      </body></html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pisces World login form</title>
+        <style>
+ *{margin:0px;padding:0px;}
+        body{margin-top: 120px;}
+        header{background-color: rgb(0, 30, 255); width:100%;height:110px;display:block;overflow:hidden;position: fixed; top: 0; left: 0; z-index: 1000;}
+        .t1{width:100%;height:40px;background-color: aquamarine;gap:10px;display:block;}
+        .logo{padding:0;float:left;width:50px;}
+        .title{float:right;}
+        .t2{width:100%;height:40px;align-items: center;text-align: center;}
+        .t3{width:100%;height:30px;font-size:20px;display: flex;justify-content: flex-end;Padding:2px;background-color: aqua;}
+        ul{display:flex;justify-content:center;list-style-type: none;text-align: center;gap:10px;}
+        ul a{text-decoration: none;}
+        ul li {padding:2px;}
+        .t4{background-color: bisque;width:100%;height:40px;display:flex;justify-content: flex-start;font-size: 20px;}
+        .t4 nav{width:100%;}
+        .t4 ul{display: flex;justify-content:left;list-style-type: none;text-align: center;gap:20px;height:30px;padding:2px;}
+        .search-bar{width:150%;justify-content: center;display:flex; padding:2px;height:30px;gap:20px;}
+        .search-bar input{width:50%;border-radius: 20px;}
+        .search-bar button{width:10%;border-radius:10px; background-color: aquamarine;}
+        
+        .forminfo{width:100%;height:700px;background-color:blueviolet;margin:10px;padding:10px;display:flex;overflow: hidden;background-image: url(form.jpg);}
+        .formdescription,.form{flex:1;}
+        .formdescription{width:50%;height:700px;color:azure;}
+        .form{width:50%;height:700px;border:2px solid yellow;padding:20px;margin:20px 0px;background-color: rgba(0,0,0, 0.5);color:whitesmoke;}
+        legend{width:100%;border:2px solid orange;padding:20px;}
+       .address{width:100px;}
+       .textarea{width:70%;height:15px;}
+        .fr1{width:800px;border:2px solid red;height:350px;background-image: url(form1.jpg);}
+        .fr2{width:800px;border:2px solid blue;height:170px;background-image: url(form2.jpg);}
+        .fr3{width:800px;border:2px solid green;height:180px;background-image: url(fomwa5.jpg);}
+        .sb{width:100px;height:20px;background-color: blue;color:aliceblue;border-radius:10px;float:center;}
+        
+
+        footer{width:100%;height:400px;background-color:rgba(0,0,0,0.8);}
+        .f1,.f2{display:flex;height:100%;flex:1;}
+        .f1{width:100%;height:100px;display:flex; margin-top:10px; }
+        .box1{width:60%;text-align:center;padding:2px;color:aliceblue;}
+        .box2{width:40%;text-align:center;padding:2px;justify-content: center;padding-top:15px;}
+        .box2 input{width:70%;height:50px;border-radius:5px;margin-top:10px;}
+        .box2 button{width:20%;height:50px;border-radius:10px;background-color:crimson;font-size:28px;margin-top:10px;}
+        .footerbottom { display: flex; width: 100%; height: 200px;} /* Adjust height as needed */
+        .f2{width:60%;height:200px;display:flex;overflow:hidden;padding:20px;color:aliceblue;}
+        .bx1,.bx2,.bx3{flex:1;height:100;text-align:left;padding:10px;}
+        .bx1{width:120px;border:2px solid red;text-align:left;}
+        .bx2{width:350px;border:2px solid blue;}
+        .bx3{width:250px;border:2px solid green;}
+        .f3{width:40%;height:200px;display:flex;overflow:hidden;padding:10px;}
+        .cr{padding:20px;color:azure;}
+        </style>
+        </head>
+        <body>
+            <header>
+                <div class="t1"> 
+                  <div class="logo">
+                      <img src="fishlogo1.png" alt=""  style="width:40px;height:35px">
+                  </div>
+                  <div class="t2">
+                      <h1 style="text-align: center;">Welcome to the Pisces World!</h1>
+                  </div>
+                </div>
+                  <div class="t3">
+                    <nav>
+                      <ul>
+                          <li><a href="newcheck.html">Home</a></li>
+                          <li><a href="signin.html">Signin</a></li>
+                          <li><a href="loginform.html">Login</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="contactus.html">contact</a></li>
+                        </ul>
+                      </nav> 
+                    </div>
+                  <div class="t4">
+                    <nav>
+                      <ul>
+                        <li><a href="#">Fish</a></li>
+                        <li><a href="#">Plants</a></li>
+                        <li><a href="#">Soil</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Live Food</a></li>
+                    </ul>
+                    </nav>
+                    <div class="search-bar">
+                      <input type="text" placeholder="          Search..." id="searchInput">
+                      <button onclick="search()">Search</button>
+                  </div>
+                  </div>
+                    </header>
+
+            <div class="forminfo">
+                <div class="formdescription">
+                  <div class="fr1">
+
+                    <h1>Welcome to Pisces World!</h1><br>
+
+                   <p style="background-color:rgba(0,0,0, 0.5);"> We are thrilled to have you explore our website and consider purchasing fishes, aquatic plants, accessories, live food, and exotic products. After filling out a simple form with your details, your account will be created using the provided mobile number and email address.
+                    
+                    With your account, you can easily browse our products, click the Buy button to add items to your cart, and view a summary of your purchases. You can also track your delivery status by logging into your account. Our customer service team is always available to assist you, including handling refund requests directly to your bank account, as per our terms and conditions. To enhance your experience, we’ll keep you updated through WhatsApp notifications.
+                    
+                    Occasionally, during seasonal fish availability, we offer discounts, especially for customers who have added items to their wishlist. You will be notified of these special offers via your registered contact number.
+                    
+                    If delivery cannot be completed to the specified address or the intended recipient is unavailable, we will attempt to deliver to an alternate address and contact the customer through the alternate mobile number provided. If we are unable to reach the customer, the delivery may be directed to an alternate recipient.</p>
+
+                    </div>
+                  <div class="fr2">
+                    <h2>Benefits of Keeping Fish and Aquatic Plants</h2><br>
+                    <h3>Fishkeeping Benefits:</h3><br>
+                    
+                      <p style="background-color:rgba(0,0,0, 0.5);">Watching fish swim in an aquarium reduces stress and promotes relaxation.</p>
+                      <p style="background-color:rgba(0,0,0, 0.5);">Fish tanks can improve your mood and lower blood pressure.</p>
+                      <p style="background-color:rgba(0,0,0, 0.5);">Maintaining an aquarium teaches responsibility and care, making it a great educational tool for kids.</p>
+                    
+                    </div>
+                    <div class="fr3" style="background-color:rgba(0,0,0, 0.5);">
+                   <h3>Interesting Facts About Aquatic Plants:</h3><br>
+                    
+                      <p style="background-color:rgba(0,0,0, 0.5);">Aquatic plants help maintain water quality by absorbing excess nutrients and reducing algae growth.</p>
+                      <p style="background-color:rgba(0,0,0, 0.5);">They produce oxygen during the day, improving the ecosystem for your fish.</p>
+                      <p style="background-color:rgba(0,0,0, 0.5);">Certain plants, like Anubias and Java Fern, are incredibly hardy and require minimal maintenance.</p>
+                     <p style="background-color:rgba(0,0,0, 0.5);">Start your journey into the fascinating world of aquariums today!</p>
+                    </p></div>
+                  </div>
+                <div class="form">
+                  <form action="data storing.htm" target="_blank" method="get" autocomplete>
+                    <fieldset>
+                        <legend>
+                          <caption><h1><b>Login Form</b></h1></caption><br>
+                          <div>
+                            <label for="title">Title</label>
+                            <select id="title" name="title">
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Ms">Miss</option>
+                            </select>
+                        </div>
+                    <br>
+                        <!--First Name -->
+                        <div>
+                        <label for="fName">First Name</label>
+                        <input type="text" id="fName" name="fName" placeholder="first name" autofocus required>
+                        </div>
+                    <br>
+                    <!--Last Name-->
+                        <div>
+                        <label for="lName">Last Name</label>
+                        <Input type="text" id="lName" name="lName" placeholder="Last name" autofocus required>
+                        </div>
+                    <br>
+                    <!--Date of Birth--><!--For interview i need a person, those who born form 1990 to 2010-->
+                        <div>
+                        <label for="doB">Date of birth</label>
+                        <input type="date" id="doB" name="doB" placeholder="2012-12-12" max="2010-12-12" min="1980-12-12" autofocus required>
+                        </div>
+                    <br>
+                    <!--Email -->
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" autofocus required>
+                    </div>
+                    <br>
+                    <!--Mobile number-->
+                    <div>
+                        <label for="Mnumber">Mobile number</label>
+                        <input type="number" id="Mnumber" name="Mnumber" placeholder="12345-67890"pattern="[0-9]{5}-[0-5]{5}" maxlenght="10" autofocus required>
+                        <!--I would to use the number to make restriction of tendigit number with pattern-->
+                    </div>
+                    <br>
+                    <!--Upload photo whether it is jpg or png format-->
+                    <div>
+                        <label for="Pic">Photo</label>
+                        <input type="file" id="Pic" name="Pic" accept=".jpg, .png" multiple>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="Gender" size="1">
+                            <option value="Male">Male</option>
+                            <option value="Female">female</option>
+                            <option value="Transgender">transgender</option>
+                        </select>
+                    </div><br>
+                    <!--Address-->
+                    <div class="Address">
+                        <div>
+                        <h3>Address</h3>
+                        <br>
+                        <label for="Saddress">Street Address</label>
+                        <textarea id="Saddress" name="Saddress"  placeholder="Enter your street Address" width="523px" height="18px" required autofocus></textarea>  
+                    
+                    </div>
+                    <br>
+                    <div>
+                      <label for="Saddress2">Street Address Line 2</label>
+                      <textarea id="Saddress2" name="Saddress2"  placeholder="Enter your street Address line 2" width="523px" height="18px" row="1" required autofocus></textarea>  
+
+                    </div>
+                    <br>
+                    <!--Choosing district of tamilnadu-->
+                    <div>
+                      <label for="city">City</label>
+                        <input list="city" name="city" placeholder="select your city" autofocus required>
+                        <datalist id="city">
+                         <option value=Ariyalur>Ariyalur</option>
+                     <option value=Chennai>Chennai</option>
+                     <option value=Coimbatore>Coimbatore</option>
+                     <option value=Cuddalore>Cuddalore</option>
+                     <option value=Dharmapuri>Dharmapuri</option>
+                     <option value=Dindigul>Dindigul</option>
+                     <option value=Erode>Erode</option>
+                     <option value=Kancheepuram>Kancheepuram</option>
+                     <option value=Kanniyakumari>Kanniyakumari</option>
+                     <option value=Karur>Karur</option>
+                     <option value=Krishnagiri>Krishnagiri</option>
+                     <option value=Madurai>Madurai</option>
+                     <option value=Nagapattinam>Nagapattinam</option>
+                     <option value=Namakkal>Namakkal</option>
+                     <option value=Perambalur>Perambalur</option>
+                     <option value=Pudukkottai>Pudukkottai</option>
+                     <option value=Ramanathapuram>Ramanathapuram</option>
+                     <option value=Salem>Salem</option>
+                     <option value=Sivaganga>Sivaganga</option>
+                     <option value=Thanjavur>Thanjavur</option>
+                     <option value=The Nilgiris>The Nilgiris</option>
+                     <option value=Theni>Theni</option>
+                     <option value=Thiruvallur>Thiruvallur</option>
+                     <option value=Thiruvarur>Thiruvarur</option>
+                     <option value=Thoothukkudi>Thoothukkudi</option>
+                     <option value=Tiruchirappalli>Tiruchirappalli</option>
+                     <option value=Tirunelveli>Tirunelveli</option>
+                     <option value=Tiruppur>Tiruppur</option>
+                     <option value=Tiruvannamalai>Tiruvannamalai</option>
+                     <option value=Vellore>Vellore</option>
+                     <option value=Viluppuram>Viluppuram</option>
+                     <option value=Virudhunagar>Virudhunagar</option>
+                        </datalist>
+
+                     </div>
+                     <br>
+                     <!--Choosing state by typing the first word-->
+                     <div>
+                      <label for="state">State</label>
+                        <input list="state" name="state" placeholder="select your state" autofocus required>
+                        <datalist id="state">
+                    <option value=Andhra Pradesh>Andhra Pradesh</option>
+                    <option value=Arunachal Pradesh>Arunachal Pradesh</option>
+                    <option value=Assam>Assam</option>
+                    <option value=Bihar>Bihar</option>
+                    <option value=Chhattisgarh>Chhattisgarh</option>
+                    <option value=Goa>Goa</option>
+                    <option value=Gujarat>Gujarat</option>
+                    <option value=Haryana>Haryana</option>
+                    <option value=Himachal Pradesh>Himachal Pradesh</option>
+                    <option value=Jharkhand>Jharkhand</option>
+                    <option value=Karnataka>Karnataka</option>
+                    <option value=Kerala>Kerala</option>
+                    <option value=Madhya Pradesh>Madhya Pradesh</option>
+                    <option value=Maharashtra>Maharashtra</option>
+                    <option value=Manipur>Manipur</option>
+                    <option value=Meghalaya>Meghalaya</option>
+                    <option value=Mizoram>Mizoram</option>
+                    <option value=Nagaland>Nagaland</option>
+                    <option value=Odisha>Odisha</option>
+                    <option value=Punjab>Punjab</option>
+                    <option value=Rajasthan>Rajasthan</option>
+                    <option value=Sikkim>Sikkim</option>
+                    <option value=Tamil Nadu>Tamil Nadu</option>
+                    <option value=Telangana>Telangana</option>
+                    <option value=Tripura>Tripura</option>
+                    <option value=Uttar Pradesh>Uttar Pradesh</option>
+                    <option value=Uttarakhand>Uttarakhand</option>
+                        </datalist>
+                    </div>
+                    <br>
+                    <button class="sb" type="submit">sumbit</button>
+                    </div>
+                    <br>
+                        </legend>
+                      </fieldset>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <footer>
+                <div class="f1">
+                <div class="box1">
+                  <h1>BE THE FIRST TO KNOW</h1>
+                  <p>Get all the latest information on Events, Sales and Offers.</p>
+                  <p>Sign up for newsletter today.</p></div>
+                <div class="box2">
+                <label for="Email" id=""></label>
+                <input type="email" name="Email" id="Email">
+                <button type="submit">Subscribe</button>
+              </div>
+            </div><hr>
+            <div class="footerbottom">
+            <div class="f2">
+              <div class="bx1">
+                <pre>
+  My Account
+  My order
+  Order History
+  Wishlist
+                </pre>
+            
+            </div>
+            <div class="bx2">
+              <pre>
+  About us
+  Contact us
+  Customer Reviews
+  Bunnycart: In the News
+  Earn with affiliate program
+  Wholesale prices for Aquarium shops / Resel
+              </pre>
+            
+            </div>
+            <div class="bx3">
+              <pre>
+  Important Policies
+  FAQ
+  Shipping Policy
+  Live Arrival Guarantee
+  Refund & Cancellation Policy
+              </pre>
+            
+            </div>
+            <div class="f3" style="width:100%;height:160px;padding:20px;align-items: center; gap:2px;">
+              <p style="border:2px solid yellow;font-size:60px;color:aliceblue; align-items: first baseline;" ><b>follow us on!</b></p>
+              <img src="in.png" alt="insta" width="100px"height="100px">
+            <img src="wa.png" alt="linkedin" width="100px" height="100px">
+            <img src="li.png" alt="whatsapp" widht="100px" height="100px">
+            <img src="fb.png" alt="facebook" width="100px" height="100px">
+            <img src="yt.png" alt="youtube" widht="100px" height="100px"></div>
+            </div></div>
+            <br>
+            <br>
+            <hr>
+            <div class="cr"><p><b>Copyright 2024 © Pisces world. All Rights Reserved. Pisces Trade Mark is registered.
+            </b>
+            </p></div>
+            
+            </footer>
+        </body>
+</html>
